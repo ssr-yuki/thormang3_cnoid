@@ -55,7 +55,7 @@ items:
               data: 
                 isNoDelayMode: false
                 controllerOptions: ""
-                controller: "/home/qingweidesk/choreonoid/build/lib/choreonoid-1.7/simplecontroller/Thorman_MinController.so"
+                controller: "${PROGRAM_TOP}/lib/choreonoid-1.8/simplecontroller/Thorman_MinController.so"
                 baseDirectory: "None"
                 reloading: false
                 isOldTargetVariableMode: false

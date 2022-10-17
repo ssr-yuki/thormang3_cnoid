@@ -503,13 +503,22 @@ links:
       6.01175E-7, 5.7E-11, -4.4577E-8,
       5.7E-11, 3.544498E-6, 2.3E-11,
       -4.4577E-8, 2.3E-11, 3.417531E-6 ]
-    elements: { Resource: { uri: "Thormang3_parts/robotis_l_leg_foot.wrl" } }
+    elements:
+      - 
+        type: Resource
+        uri: "Thormang3_parts/robotis_l_leg_foot.wrl"
+      -
+        type: ForceSensor
+        name: L_FT_SENSOR
+        translation: [ 0, 0, 0 ]
+        rotation: [ 1, 0, 0, 3.14159 ]
+
   -
     name: RLEG_HIP_Y
     parent: WAIST
     jointType: revolute
     jointId: 26
-    jointAxis: [ 0.0, 0.0, -1.0 ]
+    jointAxis: [ 0.0, 0.0, 1.0 ]
     translation: [ 0.0, -0.093, -0.018 ]
     jointRange: [ -1.41, 1.41 ]
     gearRatio: 501.9
@@ -528,7 +537,7 @@ links:
     parent: RLEG_HIP_Y
     jointType: revolute
     jointId: 27
-    jointAxis: [ -1.0, 0.0, 0.0 ]
+    jointAxis: [ 1.0, 0.0, 0.0 ]
     translation: [ 0.057, 0.0, -0.075 ]
     jointRange: [ -0.942, 0.628 ]
     gearRatio: 501.9
@@ -547,7 +556,7 @@ links:
     parent: RLEG_HIP_R
     jointType: revolute
     jointId: 28
-    jointAxis: [ 0.0, -1.0, 0.0 ]
+    jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ -0.057, -0.033, -0.0 ]
     jointRange: [ -1.256, 1.256 ]
     gearRatio: 501.9
@@ -566,7 +575,7 @@ links:
     parent: RLEG_HIP_P
     jointType: revolute
     jointId: 29
-    jointAxis: [ 0.0, -1.0, 0.0 ]
+    jointAxis: [ 0.0, 1.0, 0.0 ]
     translation: [ 0.0, -0.06, -0.3 ]
     jointRange: [ -0.314, 2.198 ]
     gearRatio: 501.9
@@ -634,7 +643,15 @@ links:
       6.01175E-7, 5.7E-11, -4.4577E-8,
       5.7E-11, 3.544498E-6, 2.3E-11,
       -4.4577E-8, 2.3E-11, 3.417531E-6 ]
-    elements: { Resource: { uri: "Thormang3_parts/robotis_r_leg_foot.wrl" } }
+    elements: 
+      -
+        type: Resource
+        uri: "Thormang3_parts/robotis_r_leg_foot.wrl"
+      -
+        type: ForceSensor
+        name: R_FT_SENSOR
+        translation: [ 0, 0, 0 ]
+        rotation: [ 1, 0, 0, 3.14159 ]
   -
     name: HEAD_Y
     parent: TORSO_Y
